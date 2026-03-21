@@ -3,9 +3,9 @@
 Este proyecto corresponde al Trabajo Práctico Formativo Obligatorio 1 de Desarrollo Web. Se trata de un portafolio personal desarrollado con HTML5 y CSS3, que incluye secciones como presentación personal, proyectos destacados, habilidades técnicas, películas favoritas y un formulario de contacto. El diseño es totalmente responsivo y utiliza Flexbox y Grid para la organización de los elementos.
 
 ## URL del Sitio Publicado
-https://guillote1977.github.io/PFO1-Frontend/
+https://guillote1977.github.io/PFO1-frontend/
 ## URL del Repositorio
-https://github.com/guillote1977/PFO1-Frontend/
+https://github.com/guillote1977/PFO1-frontend/
 ## Checklist de Requerimientos
 
 ### Estructura del Proyecto
