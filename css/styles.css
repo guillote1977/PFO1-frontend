@@ -1,0 +1,387 @@
+/* Reset básico para consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables CSS para facilitar mantenimiento */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #ecf0f1;
+    --white: #ffffff;
+    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Aplicación de la fuente de Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* Estilos de contenedor para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Transición hover en enlaces de navegación */
+.nav-menu a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* SECCIONES GENERALES */
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* SOBRE MÍ */
+.sobre-mi-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.perfil-img {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.perfil-img img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--secondary-color);
+}
+
+.perfil-texto {
+    flex: 2 1 400px;
+}
+
+.perfil-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* TARJETAS - Usando Grid para organización */
+.tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Animación hover para tarjetas */
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+.tarjeta h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.tarjeta p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* HABILIDADES - Estilización de tabla */
+.habilidades-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.habilidades-tabla thead {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.habilidades-tabla th,
+.habilidades-tabla td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.habilidades-tabla tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.habilidades-tabla ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.habilidades-tabla li {
+    margin-bottom: 0.3rem;
+}
+
+/* PELÍCULAS */
+.peliculas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pelicula-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.pelicula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.pelicula-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pelicula-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.pelicula-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* FORMULARIO DE CONTACTO */
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-grupo input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.form-grupo input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+}
+
+.btn-submit {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: var(--transition);
+    width: 100%;
+}
+
+/* Transición hover para botón */
+.btn-submit:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* MEDIA QUERIES - Diseño responsivo */
+@media (max-width: 768px) {
+    .sobre-mi-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .habilidades-tabla {
+        font-size: 0.9rem;
+    }
+
+    .habilidades-tabla th,
+    .habilidades-tabla td {
+        padding: 0.5rem;
+    }
+
+    .peliculas-grid,
+    .tarjetas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .contacto-form {
+        padding: 1.5rem;
+    }
+
+    .form-grupo input {
+        padding: 0.6rem;
+    }
+
+    .btn-submit {
+        padding: 0.8rem;
+    }
+}
