@@ -16,6 +16,8 @@
         </div>
     </header>
 
+    <! -- 1. Barra de navegación principal que utiliza enlaces ancla para desplazar al usuario por la misma página (Single Page Application simulada). 
+    Mejora a futuro: Implementar un menú tipo "hamburguesa" colapsable mediante JavaScript para optimizar el espacio en pantallas de dispositivos móviles. -- >
     <nav class="navbar">
         <ul class="nav-menu">
             <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -25,22 +27,24 @@
     </nav>
 
     <main>
+        <! -- 2. Sección de presentación personal que organiza una imagen y un bloque de texto utilizando Flexbox para mantener la alineación. 
+        Mejora a futuro: Agregar un botón interactivo debajo de la descripción que permita a los reclutadores descargar mi Currículum Vitae en formato PDF. -- >
         <section id="sobre-mi" class="section sobre-mi">
             <div class="container">
                 <h2>Sobre Mí</h2>
                 <div class="sobre-mi-content">
                     <div class="perfil-img">
-                      
-<img src="img/profile.jpg" alt="Foto de perfil de Guillermo" width="200">
-
+                        <img src="img/profile.jpg" alt="Foto de perfil de Guillermo" width="200">
                     </div>
                     <div class="perfil-texto">
                         <p>Soy Guillermo, un Desarrollador Full Stack y Especialista en Automatización e IA enfocado en crear herramientas que resuelvan problemas reales. Me apasiona optimizar procesos a través del código, integrando sistemas de gestión, inventarios y motores de extracción de datos. Busco constantemente perfeccionar mis habilidades y aplicar nuevas tecnologías para ofrecer soluciones innovadoras y eficientes.</p>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <! -- 3. Contenedor de proyectos destacados que implementa CSS Grid para distribuir las tarjetas de forma responsiva en múltiples columnas según el ancho de la pantalla. 
+        Mejora a futuro: Integrar ventanas modales (pop-ups) al hacer clic en las tarjetas para mostrar galerías de imágenes más detalladas de cada sistema desarrollado. -- >
         <section id="tarjetas" class="section tarjetas">
             <div class="container">
                 <h2>Proyectos ejemplos</h2>
@@ -55,11 +59,10 @@
                         <h3>Inventario Visual</h3>
                         <p>Desarrollo backend para la trazabilidad de stock en tiempo real, gestión de consumibles y vinculación directa con comprobantes de entrega.</p>
                     </article>
-                    
                      <article class="tarjeta">
                         <img src="img/extraccion.jpg" alt="Extracción de datos">
                         <h3>Extracción de datos</h3>
-                        <p>Implementación de scripts automatizados utilizando Tesseract para la digitalización, lectura y extracción de información desde documentos escaneados./p>
+                        <p>Implementación de scripts automatizados utilizando Tesseract para la digitalización, lectura y extracción de información desde documentos escaneados.</p>
                     </article>
                 </div>
             </div>
@@ -128,13 +131,15 @@
                         <p>Una aventura épica que redefine el género de fantasía con personajes memorables y un mundo increíble.</p>
                     </article>
                 </div>
-                </div>
+            </div>
         </section>
 
+        <! -- 4. Estructura del formulario de contacto con etiquetas semánticas y validación básica de campos requeridos (required). 
+        Mejora a futuro: Conectar este formulario a un script backend estructurado en PHP para procesar y enviar los correos electrónicos reales, registrando los contactos en una base de datos MySQL. -- >
         <section id="contacto" class="section contacto">
             <div class="container">
                 <h2>Contacto</h2>
-                <form class="contacto-form" action="#" method="post">
+                <form class="contacto-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Modo de prueba: El formulario frontend funciona correctamente, pero el envío de mensajes no está disponible en esta versión.');">
                     <div class="form-grupo">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -153,7 +158,7 @@
                     </div>
                     <button type="submit" class="btn-submit">Enviar mensaje</button>
                 </form>
-                </div>
+            </div>
         </section>
     </main>
 
