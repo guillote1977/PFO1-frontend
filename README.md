@@ -4,11 +4,11 @@ Este proyecto corresponde al Trabajo Práctico Formativo Obligatorio 1 de Desarr
 
 ## URL del Sitio Publicado
 
-https://guillote1977.github.io/PFO1-Front/
+https://guillote1977.github.io/PFO1-frontend/
 
 ## URL del Repositorio
 
-https://github.com/guillote1977/PFO1-Front/
+https://github.com/guillote1977/PFO1-frontend/
 
 ## Checklist de Requerimientos
 
